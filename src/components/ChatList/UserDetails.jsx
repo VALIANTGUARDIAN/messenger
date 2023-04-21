@@ -1,3 +1,12 @@
+import Vector from "../../assets/vector.jpg"
+export const myUser = [{
+  image: `${Vector}`,
+  name: "Ethan Hunt",
+  active: true,
+  isOnline: true,
+  message:"Online"
+}];
+
 export const pinnedChatUsers = [
   {
     image:
@@ -9,8 +18,7 @@ export const pinnedChatUsers = [
     message: "Tim Hover is typing...",
   },
   {
-    image:
-      "https://pbs.twimg.com/profile_images/770394499/female.png",
+    image: "https://pbs.twimg.com/profile_images/770394499/female.png",
     id: 2,
     name: "Emilia Sam",
     active: false,

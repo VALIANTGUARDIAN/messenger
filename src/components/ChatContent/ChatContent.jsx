@@ -1,8 +1,15 @@
 import React from 'react'
+import ChatContentHeader from './ChatContentHeader'
+import ChatContentBody from './ChatContentBody'
+import ChatContentFooter from './ChatContentFooter'
 
 const ChatContent = () => {
   return (
-    <div>ChatContent</div>
+    <>
+    <ChatContentHeader />
+    <ChatContentBody />
+    <ChatContentFooter />
+    </>
   )
 }
 

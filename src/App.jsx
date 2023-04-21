@@ -1,12 +1,9 @@
-// import ChatBody from "./components/ChatBody";
-
-import ChatList from "./components/ChatList/ChatLists";
+import ChatBody from "./components/ChatBody";
 
 function App() {
   return (
     <div className="App">
-      {/* <ChatBody /> */}
-      <ChatList />
+      <ChatBody />
     </div>
   );
 }

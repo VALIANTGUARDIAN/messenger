@@ -1,33 +1,6 @@
 import React from "react";
-import { Avatar, Box, Badge, Stack, Divider } from "@mui/material";
-import { styled } from "@mui/material/styles";
-
-const StyledBadge = styled(Badge)(({ theme, active }) => ({
-  "& .MuiBadge-badge": {
-    backgroundColor: active ? "green" : "red",
-    color: active ? "green" : "red",
-    boxShadow: `0 0 0 2px ${theme.palette.background.paper}`,
-    "&::after": {
-      position: "absolute",
-      top: 0,
-      left: 0,
-      width: "100%",
-      height: "100%",
-      borderRadius: "50%",
-      content: '""',
-    },
-  },
-}));
-
-const userList = {
-  padding: "1rem",
-  paddingBottom: "0",
-  cursor: "pointer",
-  borderRadius: "1rem",
-  "&:hover": {
-    backgroundColor: "#e7e7e79e",
-  },
-};
+import { Avatar, Box, Stack, Divider } from "@mui/material";
+import { StyledBadge, userList } from "./ChatListSX";
 
 const ChatItem = ({ image, name, active, isOnline, message }) => {
   return (
@@ -41,14 +14,15 @@ const ChatItem = ({ image, name, active, isOnline, message }) => {
         >
           <Avatar alt={name} src={image} />
         </StyledBadge>
-
-        <Box>
-          <Box fontWeight="bold">{name}</Box>
-        </Box>
-        <Box></Box>
+        <Stack direction="column" rowGap={0.5}>
+          <Box>
+            <Box fontWeight="bold">{name}</Box>
+          </Box>
+          <Box fontSize="0.9rem" color="#b1b1b1">{message}</Box>
+        </Stack>
         {isOnline && <Box flexGrow={1} />}
       </Stack>
-      <Divider sx={{paddingBottom:"1rem"}} />
+      <Divider sx={{ paddingBottom: "1rem" }} />
     </Box>
   );
 };
@@ -56,7 +30,7 @@ const ChatItem = ({ image, name, active, isOnline, message }) => {
 const ChatItemList = ({ items }) => {
   return (
     <Box>
-      {items.map((item) => (
+      { items.map((item) => (
         <ChatItem
           key={item.id}
           image={item.image}
