@@ -3,6 +3,7 @@ import EditIcon from "@mui/icons-material/Edit";
 import SearchIcon from "@mui/icons-material/Search";
 import PushPinIcon from "@mui/icons-material/PushPin";
 import { IoEllipsisHorizontalOutline } from "react-icons/io5";
+import { MdEmail } from "react-icons/md";
 import React from "react";
 import {
   listContainer,
@@ -13,6 +14,10 @@ import {
   SearchIconWrapper,
   StyledInputBase,
 } from "./ChatListSX";
+import ChatItemList from "./ChatItemList";
+import { pinnedChatUsers, allUsers } from "./UserDetails";
+
+
 
 const ChatList = () => {
   return (
@@ -44,6 +49,18 @@ const ChatList = () => {
             <PushPinIcon sx={pinIcon} /> Pinned Message (3)
           </Typography>
           <IoEllipsisHorizontalOutline />
+        </Box>
+        <Box>
+          <ChatItemList items={pinnedChatUsers} />
+        </Box>
+        <Box sx={pinnedMessage}>
+          <Typography variant="body1" sx={{paddingTop:"1rem"}}>
+            <MdEmail /> All Message (22)
+          </Typography>
+          <IoEllipsisHorizontalOutline />
+        </Box>
+        <Box>
+          <ChatItemList items={allUsers} />
         </Box>
       </Box>
     </div>
