@@ -8,6 +8,7 @@ import ImageIcon from "@mui/icons-material/Image";
 import SendIcon from "@mui/icons-material/Send";
 const inputBox = {
   padding: "2rem",
+  height:"30vh",
   "& .MuiOutlinedInput-root": {
     borderRadius: "0.5rem 0.5rem 0 0 ",
   },

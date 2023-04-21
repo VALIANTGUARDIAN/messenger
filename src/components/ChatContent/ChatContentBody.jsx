@@ -1,8 +1,13 @@
+import { Box } from '@mui/material'
 import React from 'react'
 
 const ChatContentBody = () => {
   return (
-    <div>ChatContentBody</div>
+    <>
+    <Box sx={{height:"60vh", bgcolor:"#ececec"}}>
+
+    </Box>
+    </>
   )
 }
 

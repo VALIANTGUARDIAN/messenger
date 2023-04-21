@@ -45,6 +45,7 @@ const ChatContentHeader = () => {
           justifyContent: "space-between",
           alignItems: "center",
           width: "95%",
+          height:"10vh"
         }}
       >
         <Box>
