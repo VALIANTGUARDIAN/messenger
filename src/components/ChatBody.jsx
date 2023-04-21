@@ -7,10 +7,10 @@ const ChatBody = () => {
   return (
     <>
     <Grid cotainer sx={{display:"flex", flexDirection:"row"}}>
-      <Grid item>
+      <Grid item width="20%">
         <ChatList />
       </Grid>
-      <Grid item>
+      <Grid item width="80%">
         <ChatContent />
       </Grid>
     </Grid>
