@@ -1,23 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;500;600;700&display=swap");
 
 body {
   margin: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   width: 0.2rem;
-  height:0.2rem;
+  height: 0.2rem;
 }
-::-webkit-scrollbar-track{
+::-webkit-scrollbar-track {
   background: #fdfdfd;
 }
-::-webkit-scrollbar-thumb{
-  background: rgb(28, 132, 218);
+::-webkit-scrollbar-thumb {
+  background: #1c84da;
   border-radius: 1rem;
 }

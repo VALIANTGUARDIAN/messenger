@@ -6,8 +6,20 @@ const UserChat = ({ user, msg, image }) => {
   const isOther = user === "other";
 
   return (
-    <Box sx={{ float: isOther ? "left" : "right", paddingTop:"1rem" }} >
-      <Paper elevation={4} sx={{ display: "flex", alignItems: "center", p: 1}}>
+    <Box sx={{ float: isOther ? "left" : "right", paddingTop: "1rem" }}>
+      <Paper
+        elevation={4}
+        sx={{
+          display: "flex",
+          alignItems: "flex-start",
+          minHeight: "4rem",
+          p: 1,
+          height: "auto",
+          padding: "1rem",
+          background: isOther ? "#e7e7e79e" : "#1c84da",
+          borderRadius: isOther? "2rem 2rem 2rem 0" : "2rem 2rem 0 2rem"
+        }}
+      >
         {isOther && (
           <Avatar
             sx={{ mr: 1 }}
@@ -37,7 +49,7 @@ const UserChat = ({ user, msg, image }) => {
 };
 
 const ChatPrompt = () => (
-  <Box sx={{width:"100%", maxWidth:"20rem", height:"auto", padding:"1rem"}}>
+  <Box sx={{ width: "100%", maxWidth: "20rem" }}>
     {userChat.map(({ key, type, msg, image }) => (
       <UserChat key={key} user={type} msg={msg} image={image} />
     ))}
