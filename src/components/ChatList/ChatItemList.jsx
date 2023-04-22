@@ -11,10 +11,19 @@ const ChatItem = ({ image, name, active, isOnline, message }) => {
           anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
           variant="dot"
           active={active}
+          sx={{ mr: { xs: 2, sm: 2, md: 0 } }}
         >
           <Avatar alt={name} src={image} />
         </StyledBadge>
-        <Stack direction="column" rowGap={0.5}>
+        <Stack
+          direction="column"
+          rowGap={0.5}
+          sx={{
+            display: { xs: "none", sm: "none", md: "flex" },
+            flexGrow: 1,
+            paddingLeft: { md: "1rem" },
+          }}
+        >
           <Box>
             <Box fontWeight="bold">{name}</Box>
           </Box>
@@ -22,7 +31,29 @@ const ChatItem = ({ image, name, active, isOnline, message }) => {
             {message}
           </Box>
         </Stack>
-        {isOnline && <Box flexGrow={1} />}
+        {isOnline && (
+          <Box sx={{ display: { xs: "none", sm: "none", md: "flex" } }}>
+            <Box
+              sx={{
+                width: "0.5rem",
+                height: "0.5rem",
+                borderRadius: "50%",
+                backgroundColor: "green",
+                display: "flex",
+              }}
+            />
+            <Box
+              sx={{
+                display: "flex",
+                paddingLeft: "0.5rem",
+                color: "grey",
+                fontSize: "0.75rem",
+              }}
+            >
+              Online
+            </Box>
+          </Box>
+        )}
       </Stack>
       <Divider sx={{ paddingBottom: "1rem" }} />
     </Box>

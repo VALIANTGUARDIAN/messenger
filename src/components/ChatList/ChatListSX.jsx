@@ -1,10 +1,10 @@
 import { styled } from "@mui/material/styles";
-import { InputBase, Badge, } from "@mui/material";
+import { InputBase, Badge } from "@mui/material";
 
 export const listContainer = {
   width: "100%",
-  height:{xs:"auto", sm:"auto", md:"100vh"},
-  overflowY:"scroll", 
+  height: { xs: "auto", sm: "auto", md: "100vh" },
+  overflowY: "scroll",
   maxWidth: "100vw",
   border: "1px solid #afafaf",
 };
@@ -67,7 +67,6 @@ export const pinnedMessage = {
   paddingRight: "1.5rem",
 };
 
-
 export const StyledBadge = styled(Badge)(({ theme, active }) => ({
   "& .MuiBadge-badge": {
     backgroundColor: active ? "green" : "red",
@@ -86,6 +85,7 @@ export const StyledBadge = styled(Badge)(({ theme, active }) => ({
 }));
 
 export const userList = {
+  display: { xs: "flex", sm: "flex", md: "flex" },
   padding: "1rem",
   paddingBottom: "0",
   cursor: "pointer",
@@ -93,5 +93,4 @@ export const userList = {
   "&:hover": {
     backgroundColor: "#e7e7e79e",
   },
-  
 };
