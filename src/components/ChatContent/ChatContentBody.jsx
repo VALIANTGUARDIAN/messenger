@@ -1,5 +1,6 @@
 import { Box } from "@mui/material";
 import React from "react";
+import ChatPrompt from './Chats/ChatPrompt';
 
 const ChatContentBodyStyle = {
   height: "65vh",
@@ -13,7 +14,9 @@ const ChatContentBodyStyle = {
 const ChatContentBody = () => {
   return (
     <>
-      <Box sx={ChatContentBodyStyle}></Box>
+      <Box sx={ChatContentBodyStyle}>
+        <ChatPrompt />
+      </Box>
     </>
   );
 };

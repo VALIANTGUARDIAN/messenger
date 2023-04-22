@@ -1,0 +1,13 @@
+.chat__list {
+  width: 100px;
+}
+
+.chat__item.other .MuiPaper-root {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.chat__item:not(.other) .MuiPaper-root {
+  margin-left: auto;
+  margin-right: 0;
+}
