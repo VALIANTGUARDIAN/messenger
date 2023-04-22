@@ -18,7 +18,9 @@ const ChatItem = ({ image, name, active, isOnline, message }) => {
           <Box>
             <Box fontWeight="bold">{name}</Box>
           </Box>
-          <Box fontSize="0.9rem" color="#b1b1b1">{message}</Box>
+          <Box fontSize="0.9rem" color="#b1b1b1">
+            {message}
+          </Box>
         </Stack>
         {isOnline && <Box flexGrow={1} />}
       </Stack>
@@ -29,8 +31,13 @@ const ChatItem = ({ image, name, active, isOnline, message }) => {
 
 const ChatItemList = ({ items }) => {
   return (
-    <Box>
-      { items.map((item) => (
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: { xs: "row", sm: "row", md: "column" },
+      }}
+    >
+      {items.map((item) => (
         <ChatItem
           key={item.id}
           image={item.image}
