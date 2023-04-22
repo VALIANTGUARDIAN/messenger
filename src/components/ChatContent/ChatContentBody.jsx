@@ -9,7 +9,8 @@ const ChatContentBodyStyle = {
   marginRight: "1.5rem",
   marginBottom: "-1rem",
   bgcolor: "#f3f3f389",
-  overflowY: "scroll"
+  overflowY: "scroll",
+  overflowX:"hidden"
 };
 
 const ChatContentBody = () => {
