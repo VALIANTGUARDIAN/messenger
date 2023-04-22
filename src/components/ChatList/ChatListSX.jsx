@@ -3,7 +3,7 @@ import { InputBase, Badge, } from "@mui/material";
 
 export const listContainer = {
   width: "100%",
-  height:"auto",
+  height:{xs:"auto", sm:"auto", md:"100vh"},
   overflowY:"scroll", 
   maxWidth: "100vw",
   border: "1px solid #afafaf",
