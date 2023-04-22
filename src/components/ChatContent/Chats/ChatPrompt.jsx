@@ -2,23 +2,27 @@ import { Avatar, Box, Paper } from "@mui/material";
 import React from "react";
 import { userChat } from "../Chats/UserChats";
 
+
+
 const UserChat = ({ user, msg, image }) => {
   const isOther = user === "other";
+  
+  const promptBox = {
+    display: "flex",
+    alignItems: "flex-start",
+    minHeight: "4rem",
+    p: 1,
+    height: "auto",
+    padding: "1rem",
+    background: isOther ? "#e7e7e79e" : "#1c84da",
+    borderRadius: isOther? "2rem 2rem 2rem 0" : "2rem 2rem 0 2rem"
+  }
 
   return (
     <Box sx={{ float: isOther ? "left" : "right", paddingTop: "1rem" }}>
       <Paper
         elevation={4}
-        sx={{
-          display: "flex",
-          alignItems: "flex-start",
-          minHeight: "4rem",
-          p: 1,
-          height: "auto",
-          padding: "1rem",
-          background: isOther ? "#e7e7e79e" : "#1c84da",
-          borderRadius: isOther? "2rem 2rem 2rem 0" : "2rem 2rem 0 2rem"
-        }}
+        sx={promptBox}
       >
         {isOther && (
           <Avatar
