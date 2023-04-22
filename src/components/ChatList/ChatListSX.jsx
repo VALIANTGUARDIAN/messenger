@@ -5,7 +5,7 @@ export const listContainer = {
   width: "100%",
   height:"100vh",
   overflowY:"scroll", 
-  maxWidth: "20rem",
+  maxWidth: "100vw",
   border: "1px solid #afafaf",
 };
 
