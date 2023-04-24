@@ -52,7 +52,7 @@ const UserChat = ({ user, msg, image }) => {
 };
 
 const ChatPrompt = () => (
-  <Box sx={{ width: "100%", maxWidth: "20rem" }}>
+  <Box sx={{ width: "100%",}}>
     {userChat.map(({ key, type, msg, image }) => (
       <UserChat key={key} user={type} msg={msg} image={image} />
     ))}
