@@ -51,7 +51,7 @@ const ChatList = () => {
           </Typography>
           <IoEllipsisHorizontalOutline />
         </Box>
-        <Box>
+        <Box sx={{overflowX:"scroll", cursor:"pointer"}}>
           <ChatItemList items={pinnedChatUsers} />
         </Box>
         <Box sx={pinnedMessage}>
@@ -60,7 +60,7 @@ const ChatList = () => {
           </Typography>
           <IoEllipsisHorizontalOutline />
         </Box>
-        <Box>
+        <Box sx={{overflowX:"scroll", cursor:"pointer"}}>
           <ChatItemList items={allUsers} />
         </Box>
       </Box>
