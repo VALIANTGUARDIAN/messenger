@@ -36,11 +36,11 @@ const ChatContentFooter = () => {
         rows={4}
       />
       <Box sx={attachBox}>
-        <FormatBoldIcon />
-        <FormatItalicIcon />
-        <FormatUnderlinedIcon />
-        <AttachFileIcon />
-        <ImageIcon />
+        <FormatBoldIcon sx={{cursor: "pointer"}}/>
+        <FormatItalicIcon sx={{cursor: "pointer"}}/>
+        <FormatUnderlinedIcon sx={{cursor: "pointer"}}/>
+        <AttachFileIcon sx={{cursor: "pointer"}}/>
+        <ImageIcon sx={{cursor: "pointer"}}/>
       </Box>
       <Box sx={submitBtn}>
         <Button
