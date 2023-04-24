@@ -15,11 +15,11 @@ const UserChat = ({ user, msg, image }) => {
     height: "auto",
     padding: "1rem",
     background: isOther ? "#e7e7e79e" : "#1c84da",
-    borderRadius: isOther? "2rem 2rem 2rem 0" : "2rem 2rem 0 2rem"
+    borderRadius: isOther? "2rem 2rem 2rem 0" : "2rem 2rem 0 2rem",
+    float: isOther ? "left" : "right", marginTop: "1rem"
   }
 
   return (
-    <Box sx={{ float: isOther ? "left" : "right", paddingTop: "1rem" }}>
       <Paper
         elevation={4}
         sx={promptBox}
@@ -48,7 +48,6 @@ const UserChat = ({ user, msg, image }) => {
           />
         )}
       </Paper>
-    </Box>
   );
 };
 
